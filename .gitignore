@@ -1,0 +1,59 @@
+# Compiled bytecode
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# IDE / editor specific files
+.idea/
+.vscode/
+.pycharm/
+
+# Virtual environment
+.venv/
+
+# System wide configuration
+# (Optional, adjust based on your needs)
+*.cfg
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Jupyter Notebooks
+*.ipynb
+# Others
+.apitoken
+
+games.csv
