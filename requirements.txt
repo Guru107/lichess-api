@@ -1,0 +1,5 @@
+berserk==0.13.2
+duckdb==1.0.0
+fastapi==0.111.0
+pandas==2.2.2
+pandas-to-pydantic==0.1.1
