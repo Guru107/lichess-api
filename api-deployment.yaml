@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api-deployment
+  name: api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-deployment
+  template:
+    metadata:
+      labels:
+        app: api-deployment
+    spec:
+      containers:
+      - name: api-deployment
+        image: api:latest
+        imagePullPolicy: Never
+        env:
+          - name: API_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: api-token
+                key: token
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000
+          name: api-port
+        
