@@ -57,3 +57,5 @@ coverage.xml
 .apitoken
 
 games.csv
+
+*node_modules*

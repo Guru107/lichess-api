@@ -1,14 +1,21 @@
 from fastapi import FastAPI
-from .aggregations import player_aggragation
+from fastapi.middleware.cors import CORSMiddleware
+from aggregations import player_aggragation
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
+origins = [
+    "http://localhost:3000",
+    "localhost:3000"
+]
 app = FastAPI(debug=True)
+app.add_middleware(CORSMiddleware,allow_origins=origins, 
+                   allow_credentials=True, 
+                   allow_methods=["*"], allow_headers=["*"])
 player_agg = player_aggragation.PlayerAggregation()
 
-@app.get("/")
+@app.get("/", tags=["root"])
 async def root():
     return {'message':'OK'}
 
